@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sbn-portal-site/static/css/main.a4f8e2c2.chunk.css",
-    "main.js": "/sbn-portal-site/static/js/main.9a2683be.chunk.js",
-    "main.js.map": "/sbn-portal-site/static/js/main.9a2683be.chunk.js.map",
+    "main.js": "/sbn-portal-site/static/js/main.961ce8a5.chunk.js",
+    "main.js.map": "/sbn-portal-site/static/js/main.961ce8a5.chunk.js.map",
     "runtime-main.js": "/sbn-portal-site/static/js/runtime-main.537e4325.js",
     "runtime-main.js.map": "/sbn-portal-site/static/js/runtime-main.537e4325.js.map",
     "static/css/2.c3b06745.chunk.css": "/sbn-portal-site/static/css/2.c3b06745.chunk.css",
     "static/js/2.07e23b04.chunk.js": "/sbn-portal-site/static/js/2.07e23b04.chunk.js",
     "static/js/2.07e23b04.chunk.js.map": "/sbn-portal-site/static/js/2.07e23b04.chunk.js.map",
     "index.html": "/sbn-portal-site/index.html",
-    "precache-manifest.496997d32b266c14bb578d1c8326be91.js": "/sbn-portal-site/precache-manifest.496997d32b266c14bb578d1c8326be91.js",
+    "precache-manifest.f79c21d07b122e627bdc0d6f82d0bc14.js": "/sbn-portal-site/precache-manifest.f79c21d07b122e627bdc0d6f82d0bc14.js",
     "service-worker.js": "/sbn-portal-site/service-worker.js",
     "static/css/2.c3b06745.chunk.css.map": "/sbn-portal-site/static/css/2.c3b06745.chunk.css.map",
     "static/css/main.a4f8e2c2.chunk.css.map": "/sbn-portal-site/static/css/main.a4f8e2c2.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.c3b06745.chunk.css",
     "static/js/2.07e23b04.chunk.js",
     "static/css/main.a4f8e2c2.chunk.css",
-    "static/js/main.9a2683be.chunk.js"
+    "static/js/main.961ce8a5.chunk.js"
   ]
 }
