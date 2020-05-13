@@ -2,15 +2,14 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Settings from '@material-ui/icons/Settings';
 
 import { useStyles } from './styles';
 import { menuItems } from '../menuItems';
-import { Link } from '@material-ui/core';
-// import { Link } from 'react-router-dom';
+// import { Link } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 interface IProps {
   openDrawer: () => void;
@@ -33,9 +32,7 @@ export const MenuBar = React.memo((props: IProps) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            <Link href="/">
-              <li className={classes.listItem}>SBN Portal</li>
-            </Link>
+            <Link to="/">SBN Portal</Link>
           </Typography>
 
           <Typography variant="subtitle1" className={classes.links}>
@@ -43,7 +40,7 @@ export const MenuBar = React.memo((props: IProps) => {
               {menuItems
                 .filter((el) => el.label !== 'Home')
                 .map((el, ind) => (
-                  <Link key={ind} href={el.route}>
+                  <Link key={ind} to={el.route}>
                     <li className={classes.listItem}>{el.label}</li>
                   </Link>
                 ))}

@@ -15,17 +15,17 @@ interface IMenuItem {
 export const menuItems: IMenuItem[] = [
   {
     label: 'Home',
-    route: '/',
+    route: '',
     icon: Home
   },
   {
     label: 'About',
-    route: '/about',
+    route: 'about',
     icon: Info
   },
   {
     label: 'Contact',
-    route: '/contact',
+    route: 'contact',
     icon: Mail
   }
 ];

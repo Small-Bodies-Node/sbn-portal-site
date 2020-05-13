@@ -6,6 +6,7 @@ import theme from '../MaterialUI';
 import { useStyles } from './styles';
 import { PageHome } from '../Components/PageHome';
 import { PageAbout } from '../Components/PageAbout';
+import { PageContact } from '../Components/PageContact';
 import { Layout } from '../Components/Layout';
 
 export const AppEntry = () => {
@@ -22,6 +23,9 @@ export const AppEntry = () => {
               </Route>
               <Route path="/about">
                 <PageAbout />
+              </Route>
+              <Route path="/contact">
+                <PageContact />
               </Route>
             </Switch>
           </Layout>
