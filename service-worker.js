@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sbn-portal-site/precache-manifest.bdd614c910cc35f6f7bc2cb2c83637fa.js"
+  "/sbn-portal-site/precache-manifest.e303c316ecd3b40328b7df7678a26b0e.js"
 );
 
 self.addEventListener('message', (event) => {
