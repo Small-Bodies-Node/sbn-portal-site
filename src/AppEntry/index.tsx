@@ -7,6 +7,7 @@ import { useStyles } from './styles';
 import { PageHome } from '../Components/PageHome';
 import { PageAbout } from '../Components/PageAbout';
 import { PageContact } from '../Components/PageContact';
+import { PageReduxDemo } from '../Components/PageReduxDemo';
 import { Layout } from '../Components/Layout';
 
 export const AppEntry = () => {
@@ -26,6 +27,9 @@ export const AppEntry = () => {
               </Route>
               <Route path="/contact">
                 <PageContact />
+              </Route>
+              <Route path="/redux-demo">
+                <PageReduxDemo />
               </Route>
             </Switch>
           </Layout>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { List, ListItem, ListItemIcon, ListItemText, Divider } from '@material-ui/core';
 
 import { useStyles } from './styles';
-import { menuItems } from '../menuItems';
+import { menuItems } from '../menu-items';
 
 interface IProps {
   onItemClick: () => void;

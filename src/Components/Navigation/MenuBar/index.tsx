@@ -7,7 +7,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Settings from '@material-ui/icons/Settings';
 
 import { useStyles } from './styles';
-import { menuItems } from '../menuItems';
+import { menuItems } from '../menu-items';
 // import { Link } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 

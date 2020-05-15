@@ -37,8 +37,12 @@
 		"@testing-library/user-event": "^7.2.1",
 		"react": "^16.13.0",
 		"react-dom": "^16.13.0",
+		"react-redux": "^7.2.0",
 		"react-router-dom": "^5.1.2",
 		"react-scripts": "3.4.0",
+		"redux": "^4.0.5",
+		"redux-actions": "^2.6.5",
+		"reselect": "^4.0.0",
 		"typeface-roboto": "0.0.75"
 	},
 	"devDependencies": {
@@ -46,7 +50,11 @@
 		"@types/node": "^12.12.30",
 		"@types/react": "^16.9.23",
 		"@types/react-dom": "^16.9.5",
+		"@types/react-redux": "^7.1.8",
 		"@types/react-router-dom": "^5.1.4",
+		"@types/redux": "^3.6.0",
+		"@types/redux-actions": "^2.6.1",
+		"@types/reselect": "^2.2.0",
 		"codelyzer": "^5.2.2",
 		"gh-pages": "^2.2.0",
 		"husky": "^4.2.5",
@@ -55,7 +63,7 @@
 		"prettier": "^2.0.4",
 		"source-map-explorer": "^2.4.2",
 		"tslint": "^6.1.1",
-    "tslint-config-prettier": "^1.18.0",
+		"tslint-config-prettier": "^1.18.0",
 		"typescript": "^3.7.5"
 	},
 	"husky": {
