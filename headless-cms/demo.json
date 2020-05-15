@@ -1,0 +1,5 @@
+{
+  "message": "This is a super simple json demo object",
+  "pi": 3.14,
+  "isElvisAlive": true
+}
