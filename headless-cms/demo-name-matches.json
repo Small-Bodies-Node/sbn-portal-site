@@ -1,0 +1,20 @@
+{
+  "matches": [
+    {
+      "type": "comet",
+      "name": "133P/Elst-Pizzaro"
+    },
+    {
+      "type": "asteroid",
+      "name": "(7968) Elste-Pizarro"
+    },
+    {
+      "type": "dust",
+      "name": "(007) Elsie-Dustarro"
+    },
+    {
+      "type": "meteor",
+      "name": "(006) Elmo-Metarro"
+    }
+  ]
+}

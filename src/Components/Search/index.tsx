@@ -3,34 +3,24 @@ import React from 'react';
 import { useStyles } from './styles';
 import { TextField } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import { useDispatch } from 'react-redux';
+import { fetchNameMatches } from '../../Redux/Thunks/fetchNameMatches';
 
 const top100Films: any[] = [
-  { title: 'The Shawshank Redemption', year: 1994 },
-  { title: 'The Godfather', year: 1972 },
-  { title: 'The Godfather: Part II', year: 1974 },
-  { title: 'The Dark Knight', year: 2008 },
-  { title: '12 Angry Men', year: 1957 }
+  //
 ];
 
 export const Search = () => {
+  const dispatch = useDispatch();
   const classes = useStyles();
+  const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('event', event.target.value);
+    const inputText = event.target.value;
+    dispatch(fetchNameMatches(inputText));
+  };
   return (
     <div className={classes.container}>
       <form className={classes.form} noValidate autoComplete="off">
-        <div className={classes.textFieldWrapper}>
-          <TextField
-            id="search-field"
-            variant="outlined"
-            defaultValue=""
-            helperText="" // Goes underneath
-            placeholder="E.g. Elst-Pizarro"
-            label="SBN Search"
-            fullWidth
-            InputLabelProps={{ shrink: true }} // Forces label to be already shifted upwards
-            style={{ margin: 0 }}
-          />
-        </div>
-
         <div className={classes.textFieldWrapper}>
           <Autocomplete
             id="combo-box-demo"
@@ -40,6 +30,7 @@ export const Search = () => {
             style={{ width: 300 }}
             renderInput={(params: any) => (
               <TextField //
+                onChange={handleTextChange}
                 {...params}
                 id="search-field"
                 variant="outlined"
