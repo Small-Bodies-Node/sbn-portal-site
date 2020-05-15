@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
 import { TPermittedTheme } from '../../Models/themes';
-import { IState } from '../Reducers/root-reducer';
+import { IState } from '../';
 
 /**
  * Elemental Selectors

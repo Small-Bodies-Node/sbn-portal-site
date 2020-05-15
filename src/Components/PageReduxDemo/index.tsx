@@ -6,12 +6,17 @@ import {
   selectSiteSettingsTheme,
   selectSiteSettingsIsHappyWithCookies
 } from '../../Redux/Selectors/site-settings-selectors';
-import { selectDemoCounterCount } from '../../Redux/Selectors/demo-counter-selectors';
+import {
+  selectDemoCounterCount,
+  selectDemoCounterQuote
+} from '../../Redux/Selectors/demo-counter-selectors';
 import {
   SiteSettingsSetTheme,
   SiteSettingsToggleIsHappyWithCookies
 } from '../../Redux/Actions/site-settings-actions';
 import { DemoCounterIncrement, DemoCounterReset } from '../../Redux/Actions/demo-counter-actions';
+
+import { fetchLutherInsult } from '../../Redux/Thunks';
 
 export const PageReduxDemo = () => {
   const classes = useStyles();
@@ -19,6 +24,7 @@ export const PageReduxDemo = () => {
   const theme = useSelector(selectSiteSettingsTheme);
   const isHappyWithCookies = useSelector(selectSiteSettingsIsHappyWithCookies);
   const demoCounterCount = useSelector(selectDemoCounterCount);
+  const { author, quote } = useSelector(selectDemoCounterQuote);
 
   return (
     <div className={classes.container}>
@@ -41,9 +47,22 @@ export const PageReduxDemo = () => {
         Toggle Is Happy With Cookies
       </button>
       <h4>Demo Counter</h4>
-      <div>counter: {demoCounterCount}</div>
-      <button onClick={() => dispatch(new DemoCounterIncrement())}>Increase Count</button>
-      <button onClick={() => dispatch(new DemoCounterReset())}>Reset Count</button>
+      <div className={classes.data}>
+        <div>
+          <span>Author</span> : {author}
+        </div>
+        <div>
+          <span>Quote</span> : {quote}
+        </div>
+        <div>
+          <span>Count</span> : {demoCounterCount}
+        </div>
+      </div>
+      <div style={{ margin: 5 }}>
+        <button onClick={() => dispatch(new DemoCounterIncrement())}>Increase Count</button>
+        <button onClick={() => dispatch(new DemoCounterReset())}>Reset Count</button>
+        <button onClick={() => dispatch(fetchLutherInsult())}> Fetch Trump Quote</button>
+      </div>
     </div>
   );
 };

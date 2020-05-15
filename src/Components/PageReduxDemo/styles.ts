@@ -5,6 +5,11 @@ export const useStyles = makeStyles(
     container: {
       width: '100%',
       height: '100%'
+    },
+    data: {
+      '& > div > span': {
+        fontWeight: 'bold'
+      }
     }
   }),
   { name: 'page-demo' }

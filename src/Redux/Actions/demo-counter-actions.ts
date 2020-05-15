@@ -4,6 +4,7 @@ import { Action } from 'redux';
  * Define all possible 'type' properties of redux actions associated with site settings
  */
 export enum EDemoCounterActionTypes {
+  SET_QUOTE = '[DemoCounter] Set Quote',
   INCREMENT = '[DemoCounter] Increment',
   RESET = '[DemoCounter] Reset'
 }
@@ -26,7 +27,14 @@ export class DemoCounterReset implements Action {
   }
 }
 
+export class DemoCounterSetQuote implements Action {
+  readonly type = EDemoCounterActionTypes.SET_QUOTE;
+  constructor(public payload: { author: string; quote: string }) {
+    return { ...this };
+  }
+}
+
 /**
  * Combine and export all action-creator class names into a single type
  */
-export type DemoCounterActions = DemoCounterIncrement | DemoCounterReset;
+export type DemoCounterActions = DemoCounterIncrement | DemoCounterReset | DemoCounterSetQuote;

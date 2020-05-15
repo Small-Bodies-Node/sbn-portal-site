@@ -89,3 +89,15 @@ Again, similar to how we chose to centralize all our action creators, so we like
 ### Working Example
 
 To see a very simple redux setup, consult this codebase before it got complex at the remote branch 'simple-redux-setup'. Pretty much all of the redux infrastructure is housed in the `src/Redux` dir. The component `PageReduxDemo` can be viewed at `/redux-demo` to see soem simple exemplification of the store being read/written to.
+
+### Side Effects with Redux-Thunk
+
+So far (i.e. up to remote branch `simple-redux-setup`), our redux setup only uses so-called 'pure functions'. I.e. when we dispatch an action to update the store, it does that and nothing else in a near-instantaneous manner. These actions are said to have no 'side effects'.
+
+However, we'll need to be able to run sequences of actions in order to implement async events. The most common such case is where you need to dispatch an action that fetches data from an api and then, when that data is ready, dispatch an action to save that data to our store. Actions that cause other actions to be triggered are said to cause 'side effects'.
+
+The simplest library for performing side effects is the one recommended by redux called 'redux-thunk'. A 'thunk' is like an action-creator function, except instead of returning an action it returns a function. That function has the redux dispatch function as its argument, and the function body provides us with space to carry out async tasks and then to dispatch further actions once those async tasks are complete.
+
+An example has been implemented, which can be seen in the remote branch `simple-redux-thunk-setup`, that turns our simple counter into a counter of quotes fetched from a random api (one for random Trump quotes). Having fetched the quote from the api, a further action is dispatched to save the quote to the store, which is then displayed in the demo-redux page (`/redux-demo`).
+
+Redux thunk is super simple to implement, but limited in features. If/when this app requires more complexity (such as the ability to throttle api calls), then we can look to using a different approach to side effects, such as redux-observable. (See [here](https://sandstorm.de/de/blog/post/async-redux-middleware-comparison.html) for good overview.)
