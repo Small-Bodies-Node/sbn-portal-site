@@ -7,7 +7,7 @@ export const PageHome = () => {
   return (
     <div className={classes.container}>
       <h1>Home Page</h1>
-      <p>This is my home page!</p>
+      <p>This is my home page!!</p>
     </div>
   );
 };

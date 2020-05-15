@@ -16,6 +16,8 @@ BASE_HREF : \033[36m${BASE_HREF} \033[32m
 PUBLIC_URL="/$BASE_HREF/" REACT_APP_BASE_HREF="/$BASE_HREF/" npm run build
 rsync -a build/ "build-$BASE_HREF/"
 
+# Copy index.html to 404.html to enable url-direct navigation
+cp "build-$BASE_HREF/index.html" "build-$BASE_HREF/404.html"
 
 # Build some node code with env vars injected
 read -r -d '' NODECMD << EOM
