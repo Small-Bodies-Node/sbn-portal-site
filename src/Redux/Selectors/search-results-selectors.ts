@@ -13,11 +13,8 @@ export const selectSearchResultsNameMatches = (state: IState) =>
 export const selectSearchResultsSelectedObject = (state: IState) =>
   state.searchResultsSubstate.selectedObject;
 
-export const selectSearchResultsRegistryResults = (name: string | undefined) => (state: IState) => {
-  const y = state.searchResultsSubstate.registryResults.find((el) => el.name === name);
-  console.log('y', state.searchResultsSubstate.registryResults, name);
-  return y;
-};
+export const selectSearchResultsRegistryResults = (name: string | undefined) => (state: IState) =>
+  state.searchResultsSubstate.registryResults.find((el) => el.name === name);
 
 /**
  * Compound Selectors

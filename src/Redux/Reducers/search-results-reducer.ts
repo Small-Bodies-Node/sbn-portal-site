@@ -3,22 +3,22 @@ import { ESearchResultsActionTypes, SearchResultsActions } from '../Actions/sear
 import { IRegistryResult } from '../Actions/search-results-actions';
 import { uniqueArrayBy } from '../../Utils/uniqueArrayBy';
 
-export interface ISearchResults {
+export interface ISearchResultsSubstate {
   nameMatches: INameMatch[];
   selectedObject?: INameMatch;
   registryResults: IRegistryResult[];
 }
 
-const initialState: ISearchResults = {
+const initialState: ISearchResultsSubstate = {
   nameMatches: [],
   selectedObject: undefined,
   registryResults: []
 };
 
 export function searchResultsReducer(
-  state: Readonly<ISearchResults> = initialState,
+  state: Readonly<ISearchResultsSubstate> = initialState,
   action: SearchResultsActions
-): ISearchResults {
+): ISearchResultsSubstate {
   switch (action.type) {
     case ESearchResultsActionTypes.SET_NAME_MATCHES: {
       return {
@@ -33,11 +33,10 @@ export function searchResultsReducer(
       };
     }
     case ESearchResultsActionTypes.SET_REGISTRY_RESULTS: {
-      const x = uniqueArrayBy([...state.registryResults, action.payload], 'name');
-      console.log('x', x);
       return {
         ...state,
-        registryResults: x
+        // Just add to registryResults then ensure array has objects unique by 'name' property
+        registryResults: uniqueArrayBy([...state.registryResults, action.payload], 'name')
       };
     }
     default:

@@ -7,13 +7,31 @@ export interface INameMatch {
   name: string;
 }
 
+interface IDataset {
+  link_to_file_server: string;
+  lid: number;
+  date: Date;
+  data_type: 'photometry' | 'spectroscopy' | 'imaging';
+  thumbnail_collections: {
+    name: string;
+    image_links: string[];
+  }[];
+}
+export interface IMissionDataset extends IDataset {
+  mission: 'neowise' | 'castalia';
+}
+
+export interface IRosesProposalDataset extends IDataset {
+  proposal: string;
+}
+
 export interface IRegistryResult {
   name: string;
   type: TObjectTypes;
   alternate_types: string[];
   cross_ids: string[];
-  mission_datasets: any[];
-  roses_proposal_datasets: any[];
+  mission_datasets: IMissionDataset[];
+  roses_proposal_datasets: IRosesProposalDataset[];
 }
 
 /**

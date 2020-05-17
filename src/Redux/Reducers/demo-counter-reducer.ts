@@ -1,21 +1,21 @@
 import { DemoCounterActions, EDemoCounterActionTypes } from '../Actions/demo-counter-actions';
 
-export interface IDemoCounter {
+export interface IDemoCounterSubstate {
   count: number;
   quote: string;
   author: string;
 }
 
-const initialState: IDemoCounter = {
+const initialState: IDemoCounterSubstate = {
   count: 0,
   quote: '',
   author: ''
 };
 
 export function demoCounterReducer(
-  state: Readonly<IDemoCounter> = initialState,
+  state: Readonly<IDemoCounterSubstate> = initialState,
   action: DemoCounterActions
-): IDemoCounter {
+): IDemoCounterSubstate {
   switch (action.type) {
     case EDemoCounterActionTypes.INCREMENT: {
       const incValue = action.payload || 1;

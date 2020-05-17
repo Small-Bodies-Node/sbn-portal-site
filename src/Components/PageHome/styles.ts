@@ -4,11 +4,7 @@ export const useStyles = makeStyles(
   (theme) => ({
     container: {
       width: '100%',
-      height: '100%',
-      '& .MuiPaper-root': {
-        marginBottom: 10,
-        padding: 20
-      }
+      height: '100%'
     },
     searchWrapper: {
       marginBottom: 10,
@@ -19,6 +15,10 @@ export const useStyles = makeStyles(
       '& h1, h2, h3, h4, h5, h6': {
         marginTop: 5,
         marginBottom: 5
+      },
+      '& > .MuiPaper-root': {
+        marginBottom: 10,
+        padding: 20
       }
     }
   }),
