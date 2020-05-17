@@ -1,8 +1,19 @@
 import { Action } from 'redux';
 
+export type TObjectTypes = 'comet' | 'asteroid' | 'dust' | 'meteor';
+
 export interface INameMatch {
-  type: 'comet' | 'asteroid' | 'dust' | 'meteor';
+  type: TObjectTypes;
   name: string;
+}
+
+export interface IRegistryResult {
+  name: string;
+  type: TObjectTypes;
+  alternate_types: string[];
+  cross_ids: string[];
+  mission_datasets: any[];
+  roses_proposal_datasets: any[];
 }
 
 /**
@@ -10,7 +21,8 @@ export interface INameMatch {
  */
 export enum ESearchResultsActionTypes {
   SET_NAME_MATCHES = '[SearchResults] Set Name Matches',
-  SELECT_OBJECT = '[SearchResults] Selecte Object'
+  SELECT_OBJECT = '[SearchResults] Select Object',
+  SET_REGISTRY_RESULTS = '[SearchResults] Set Registry Results'
 }
 
 /**
@@ -31,7 +43,17 @@ export class SearchResultsSelectObject implements Action {
   }
 }
 
+export class SearchResultsSetRegistryResults implements Action {
+  readonly type = ESearchResultsActionTypes.SET_REGISTRY_RESULTS;
+  constructor(public payload: IRegistryResult) {
+    return { ...this }; // return js object instead of class instance
+  }
+}
+
 /**
  * Combine and export all action-creator class names into a single type
  */
-export type SearchResultsActions = SearchResultsSetNameMatches | SearchResultsSelectObject;
+export type SearchResultsActions =
+  | SearchResultsSetNameMatches
+  | SearchResultsSelectObject
+  | SearchResultsSetRegistryResults;

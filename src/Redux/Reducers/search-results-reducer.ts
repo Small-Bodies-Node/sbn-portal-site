@@ -1,14 +1,18 @@
 import { INameMatch } from '../Actions/search-results-actions';
 import { ESearchResultsActionTypes, SearchResultsActions } from '../Actions/search-results-actions';
+import { IRegistryResult } from '../Actions/search-results-actions';
+import { uniqueArrayBy } from '../../Utils/uniqueArrayBy';
 
 export interface ISearchResults {
   nameMatches: INameMatch[];
   selectedObject?: INameMatch;
+  registryResults: IRegistryResult[];
 }
 
 const initialState: ISearchResults = {
   nameMatches: [],
-  selectedObject: undefined
+  selectedObject: undefined,
+  registryResults: []
 };
 
 export function searchResultsReducer(
@@ -28,7 +32,14 @@ export function searchResultsReducer(
         selectedObject: action.payload
       };
     }
-
+    case ESearchResultsActionTypes.SET_REGISTRY_RESULTS: {
+      const x = uniqueArrayBy([...state.registryResults, action.payload], 'name');
+      console.log('x', x);
+      return {
+        ...state,
+        registryResults: x
+      };
+    }
     default:
       return state;
   }
