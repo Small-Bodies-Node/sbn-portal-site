@@ -7,7 +7,7 @@ export const useStyles = makeStyles(
       height: '100%'
     },
     item: {
-      fontSize: 18,
+      fontSize: 16,
       margin: 15
     },
     itemLabel: {

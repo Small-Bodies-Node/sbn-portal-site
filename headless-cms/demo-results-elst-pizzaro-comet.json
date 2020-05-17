@@ -46,10 +46,30 @@
   ],
   "roses_proposal_datasets": [
     {
-      "proposal": "SWIFT telescopic observations"
+      "proposal": "SWIFT telescopic observations",
+      "link_to_file_server": "https://sbnportal.com/ghi",
+      "lid": 22222,
+      "date": "Sun May 17 2020 00:40:58 GMT-0400 (Eastern Daylight Time)",
+      "data_type": "imaging",
+      "thumbnail_collections": [
+        {
+          "name": "Awesome Thumbnails IV",
+          "image_links": []
+        }
+      ]
     },
     {
-      "proposal": "SWIFT telescopic observations"
+      "proposal": "SWIFT telescopic observations",
+      "link_to_file_server": "https://sbnportal.com/jkl",
+      "lid": 33333,
+      "date": "Sun May 17 2020 00:41:58 GMT-0400 (Eastern Daylight Time)",
+      "data_type": "imaging",
+      "thumbnail_collections": [
+        {
+          "name": "Awesome Thumbnails V",
+          "image_links": []
+        }
+      ]
     }
   ]
 }
