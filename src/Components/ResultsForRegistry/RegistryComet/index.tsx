@@ -103,6 +103,30 @@ export const RegistryComet = ({ registryResult }: { registryResult: IRegistryRes
                                 <a href=""> {el.link_to_file_server}</a>
                               </span>
                             </div>
+                            <div className={classes.item}>
+                              <span className={classes.itemLabel}>LID:</span>
+                              <span className={classes.itemEntry}>
+                                <a href=""> {el.lid}</a>
+                              </span>
+                            </div>
+                            <div className={classes.item}>
+                              <span className={classes.itemLabel}>Date:</span>
+                              <span className={classes.itemEntry}>
+                                <a href=""> {el.date}</a>
+                              </span>
+                            </div>
+                            <div className={classes.item}>
+                              <span className={classes.itemLabel}>Data Type:</span>
+                              <span className={classes.itemEntry}>
+                                <a href=""> {el.data_type}</a>
+                              </span>
+                            </div>
+                            <div className={classes.item}>
+                              <span className={classes.itemLabel}>Thumbnails:</span>
+                              <span className={classes.itemEntry}>
+                                <a href=""> {el.thumbnail_collections}</a>
+                              </span>
+                            </div>
                           </div>
                         ))}
                     </div>

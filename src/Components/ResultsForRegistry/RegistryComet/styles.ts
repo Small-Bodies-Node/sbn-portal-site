@@ -17,7 +17,7 @@ export const useStyles = makeStyles(
       marginRight: 0
     },
     expanderHeading: {
-      fontSize: theme.typography.pxToRem(15),
+      fontSize: 18,
       fontWeight: theme.typography.fontWeightBold,
       textTransform: 'capitalize'
     }
