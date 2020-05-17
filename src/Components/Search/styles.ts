@@ -11,15 +11,25 @@ export const useStyles = makeStyles(
     form: {
       border: `${borderWidth}px red solid`,
       width: '100%',
-      maxWidth: 500,
-      height: 100
+      maxWidth: 500
+      // height: 100
     },
     textFieldWrapper: {
       width: '100%',
-      height: 100,
-      padding: 10,
+      height: '100%',
+      padding: 0,
       border: `${borderWidth}px green solid`,
       boxSizing: 'border-box'
+    },
+    highlightedTextFieldWrapper: {
+      '& .MuiFormHelperText-root': {
+        color: 'green'
+      }
+    },
+    option: {
+      fontFamily: 'monospace',
+      fontWeight: 'bold',
+      whiteSpace: 'pre-wrap'
     }
   }),
   { name: 'search' }
