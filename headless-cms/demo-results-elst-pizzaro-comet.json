@@ -1,0 +1,25 @@
+{
+  "name": "133/Elst-Pizzaro",
+  "type": "comet",
+  "alternate_types": ["MBC/AA", "Asteroid"],
+  "cross_ids": ["Elst-Pizarro", "133P", "(7968)", "1996 N2"],
+  "mission_datasets": [
+    {
+      "mission": "neowise"
+    },
+    {
+      "mission": "neowise"
+    },
+    {
+      "mission": "castalia"
+    }
+  ],
+  "roses_proposal_datasets": [
+    {
+      "proposal": "SWIFT telescopic observations"
+    },
+    {
+      "proposal": "SWIFT telescopic observations"
+    }
+  ]
+}
