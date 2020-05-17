@@ -1,0 +1,75 @@
+{
+  "name": "133P/Elst-Pizzaro",
+  "type": "comet",
+  "alternate_types": ["MBC/AA", "Asteroid"],
+  "cross_ids": ["Elst-Pizarro", "133P", "(7968)", "1996 N2"],
+  "mission_datasets": [
+    {
+      "mission": "neowise",
+      "link_to_file_server": "https://sbnportal.com/xyz",
+      "lid": 12345,
+      "date": "Sun May 17 2020 00:37:58 GMT-0400 (Eastern Daylight Time)",
+      "data_type": "photometry",
+      "thumbnail_collections": [
+        {
+          "name": "Awesome Thumbnails I",
+          "image_links": []
+        }
+      ]
+    },
+    {
+      "mission": "neowise",
+      "link_to_file_server": "https://sbnportal.com/abc",
+      "lid": 67890,
+      "date": "Sun May 17 2020 00:38:58 GMT-0400 (Eastern Daylight Time)",
+      "data_type": "photometry",
+      "thumbnail_collections": [
+        {
+          "name": "Awesome Thumbnails II",
+          "image_links": []
+        }
+      ]
+    },
+    {
+      "mission": "castalia",
+      "link_to_file_server": "https://sbnportal.com/def",
+      "lid": 13579,
+      "date": "Sun May 17 2020 00:39:58 GMT-0400 (Eastern Daylight Time)",
+      "data_type": "spectroscopy",
+      "thumbnail_collections": [
+        {
+          "name": "Awesome Thumbnails III",
+          "image_links": []
+        }
+      ]
+    }
+  ],
+  "roses_proposal_datasets": [
+    {
+      "proposal": "SWIFT telescopic observations",
+      "link_to_file_server": "https://sbnportal.com/ghi",
+      "lid": 22222,
+      "date": "Sun May 17 2020 00:40:58 GMT-0400 (Eastern Daylight Time)",
+      "data_type": "imaging",
+      "thumbnail_collections": [
+        {
+          "name": "Awesome Thumbnails IV",
+          "image_links": []
+        }
+      ]
+    },
+    {
+      "proposal": "SWIFT telescopic observations",
+      "link_to_file_server": "https://sbnportal.com/jkl",
+      "lid": 33333,
+      "date": "Sun May 17 2020 00:41:58 GMT-0400 (Eastern Daylight Time)",
+      "data_type": "imaging",
+      "thumbnail_collections": [
+        {
+          "name": "Awesome Thumbnails V",
+          "image_links": []
+        }
+      ]
+    }
+  ]
+}

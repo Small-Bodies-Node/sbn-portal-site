@@ -16,7 +16,7 @@ import {
 } from '../../Redux/Actions/site-settings-actions';
 import { DemoCounterIncrement, DemoCounterReset } from '../../Redux/Actions/demo-counter-actions';
 
-import { fetchLutherInsult } from '../../Redux/Thunks';
+import { fetchRandomTrumpQuote } from '../../Redux/Thunks/fetchRandomTrumpQuote';
 
 export const PageReduxDemo = () => {
   const classes = useStyles();
@@ -61,7 +61,7 @@ export const PageReduxDemo = () => {
       <div style={{ margin: 5 }}>
         <button onClick={() => dispatch(new DemoCounterIncrement())}>Increase Count</button>
         <button onClick={() => dispatch(new DemoCounterReset())}>Reset Count</button>
-        <button onClick={() => dispatch(fetchLutherInsult())}> Fetch Trump Quote</button>
+        <button onClick={() => dispatch(fetchRandomTrumpQuote())}> Fetch Trump Quote</button>
       </div>
     </div>
   );

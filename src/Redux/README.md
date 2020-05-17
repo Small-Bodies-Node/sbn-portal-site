@@ -101,3 +101,5 @@ The simplest library for performing side effects is the one recommended by redux
 An example has been implemented, which can be seen in the remote branch `simple-redux-thunk-setup`, that turns our simple counter into a counter of quotes fetched from a random api (one for random Trump quotes). Having fetched the quote from the api, a further action is dispatched to save the quote to the store, which is then displayed in the demo-redux page (`/redux-demo`).
 
 Redux thunk is super simple to implement, but limited in features. If/when this app requires more complexity (such as the ability to throttle api calls), then we can look to using a different approach to side effects, such as redux-observable. (See [here](https://sandstorm.de/de/blog/post/async-redux-middleware-comparison.html) for good overview.)
+
+Note: I lean towards using `redux-observable`, however, I'd first need to consult whether you know or are willing to learn rxjs first.

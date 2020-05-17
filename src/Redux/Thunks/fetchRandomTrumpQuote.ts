@@ -2,11 +2,7 @@
 
 import { DemoCounterSetQuote, DemoCounterIncrement } from '../Actions/demo-counter-actions';
 
-export function fetchLutherInsult() {
-  // Invert control!
-  // Return a function that accepts `dispatch` so we can dispatch later.
-  // Thunk middleware knows how to turn thunk async actions into actions.
-
+export function fetchRandomTrumpQuote() {
   return function (dispatch: any) {
     return fetch('https://api.whatdoestrumpthink.com/api/v1/quotes/random')
       .then((res) => res.json())

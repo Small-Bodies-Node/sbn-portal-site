@@ -1,20 +1,20 @@
 import { TPermittedTheme } from '../../Models/themes';
 import { ESiteSettingsActionTypes, SiteSettingsActions } from '../Actions/site-settings-actions';
 
-export interface ISiteSettings {
+export interface ISiteSettingsSubstate {
   theme: TPermittedTheme;
   isHappyWithCookies: boolean;
 }
 
-const initialState: ISiteSettings = {
+const initialState: ISiteSettingsSubstate = {
   theme: 'dark',
   isHappyWithCookies: false
 };
 
 export function siteSettingsReducer(
-  state: Readonly<ISiteSettings> = initialState,
+  state: Readonly<ISiteSettingsSubstate> = initialState,
   action: SiteSettingsActions
-): ISiteSettings {
+): ISiteSettingsSubstate {
   switch (action.type) {
     case ESiteSettingsActionTypes.SET_THEME: {
       return {
